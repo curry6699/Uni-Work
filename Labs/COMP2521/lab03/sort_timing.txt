@@ -1,0 +1,35 @@
+Input	Initial	Number	AvgTime		AvgTime
+Size	Order	of Runs	for sortIntList	for sort
+10000	random	N	0.24		0.00
+10000	sorted	N	0.00		0.00
+10000	reverse	N	0.00		0.00
+20000	random	N	1.28		0.01
+20000	sorted	N	0.00		0.00
+20000	reverse	N	0.00		0.00
+50000	random	N	11.33		0.03
+50000	sorted	N	0.02		0.01
+50000	reverse	N	0.02		0.02
+Total Avg for sortIntList = 1.43 seconds
+Total Avg for sort = 0.01 seconds
+...
+
+// For Random
+sortIntList took 0.24 seconds to sort 10,000 random numbers. This is because of the while loop that is present.
+This while loop checks for numbers that are between the starting and final numbers. When this while loop is run the
+program has complexity O(n).
+This is aggravated when the size of input is increased as the while loop is run more often and
+the time taken to proccess the input increases to 1.28 and 11.33 (for size 20,000 and 50,000 respectively).
+
+// For Sorted
+sortIntList took 0.00 seconds to sort 10,000 sorted numbers. This time was significantly better than the random
+sequence of numbers since the while loop did not have to be run. Everytime a sorted number was input a simple
+check to see if the input was the largest number was only run. This allowed the program to have complexity O(1).
+As larger inputs were given the time initially did not increase at 20,000 inputs and increases to 0.02 seconds 
+for 50,000 inputs. A very small increase.
+
+// For Reverse
+sortIntList took 0.00 seconds to sort 10,000 numbers in reverse order. This time is comparable to the sorted sequence 
+time. This is due to the same reason as the sorted input. The while loop did not have to run. Everytime a number was
+input a simple check to see if the input was the smallest number was only run. This allowed the program to have 
+complexity O(1). As larger inputs were given the time initially did not increase at 20,000 inputs and increases to
+0.02 seconds for 50,000 inputs. Exactly the same as sorted input, a very small increase.

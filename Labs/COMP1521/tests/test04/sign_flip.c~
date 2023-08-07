@@ -1,0 +1,25 @@
+#include "sign_flip.h"
+#define EXPONENT 0x7F800000
+#define FRACT 0x7FFFFF
+
+// given the 32 bits of a float return it with its sign flipped
+uint32_t sign_flip(uint32_t f) {
+
+
+    uint32_t sign = f >> 31;
+
+    uint32_t exponent = f & EXPONENT
+
+    uint32_t fraction = f & FRACT;
+
+    if (sign == 0) {
+        sign = 1;
+    } else {
+        sign = 0;
+    }
+    sign = sign << 31;
+
+    uint32_t number = (sign | exponent) | fraction;
+    return number;
+
+}

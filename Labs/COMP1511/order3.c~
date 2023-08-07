@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main(void){
+    int number_1;
+    int number_2;
+    int number_3;
+    
+
+
+    printf("Enter integer:");
+    scanf("%d", &number_1);
+    printf("Enter integer:");
+    scanf("%d", &number_2);
+    printf("Enter integer:");
+    scanf("%d", &number_3);
+    
+    if (number_1 < number_2){
+    int temp = number_1;
+    number_1 = number_2;
+    number_2 = temp;
+    }
+    if (number_1 < number_3){
+    int temp = number_1;
+    number_1 = number_3;
+    number_3 = temp;
+    }
+    if (number_2 < number_3){
+    int temp = number_2;
+    number_2 = number_3;
+    number_3 = temp;
+    }
+    
+    printf:if (number_1 < number_2){
+    int temp = number_1;
+    number_1 = number_2;
+    number_2 = temp;
+    }
+    printf("The integers in order are: %d %d %d", number_3, number_2, number_1);
+    
+return 0;
+}

@@ -1,0 +1,35 @@
+// Function to print out a string that has had it's cases swapped.
+// swap_case.c
+//
+// This program was written by YOUR-NAME-HERE (z5555555)
+// on INSERT-DATE-HERE
+ 
+#include <stdio.h>
+#include <ctype.h>
+
+int swap_case(int character);
+
+int main(void) {
+    int character;
+    character = getchar();
+    while(character != EOF){
+    
+        int other_case = swap_case(character);
+        putchar(other_case);
+        character = getchar();
+    }        
+    return 0;
+}
+
+int swap_case(int character) {
+    if(character >= 'a' && character <= 'z') {
+        int offset = character - 'a';
+        return offset + 'A';    
+    
+    } else if (character >= 'A' && character <= 'Z') {
+        int offset = character - 'A';
+        return offset + 'a';        
+    
+    } 
+    return character;   
+}

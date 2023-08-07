@@ -1,0 +1,11 @@
+Question 4
+
+Which of the data structures is most suitable? Justify your answer.
+You must use time complexities as a basis for your justification.
+
+Creating a heap takes O(n)
+Push: Inserting into a heap takes O(log(n))
+Pop: Deleting the highest priority takes  O(log(n))
+Print: Printing takes O(nlog(n))
+
+Heap is better overall than the other structures.

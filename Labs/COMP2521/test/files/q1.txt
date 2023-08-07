@@ -1,0 +1,8 @@
+Question 1
+
+What is the time complexity of the algorithm? Justify your answer.
+
+O(nlog(n))
+the proccess of breaking down the problem into n/2 is a complexity of O(log(n))
+the proccess of converting the problem takes O(n)
+Multiplying both gives : O(nlog(n))

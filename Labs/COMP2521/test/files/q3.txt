@@ -1,0 +1,33 @@
+Question 3
+
+Note: if you need to promote a value, you must promote the smaller 
+value from the available alternatives (if any). Justify your answer.
+
+(a) 
+(a1) What value(s) would be stored in the root node of the above 2-3-4 
+     tree after the insertion of the value 8? 
+     Justify your answer.
+
+12, 35, 60 - unchanged
+This is because 8 will be inserted to the left most node on the bottom
+
+(a2) What value(s) would be stored in the node that now contains 8? 
+     Justify your answer.
+
+1, 7, 8
+8 Will be inserted into the left most node at the bottom, since it is higher than 7,
+it will be on the right of 7
+
+(b) 
+(b1) What value(s) would be stored in the root node of the above 2-3-4 
+     tree after the insertion of the value 50? 
+     Justify your answer.
+
+12, 35, 44
+44 Will be promoted to the root node, since 44 is higher than 35 it will be on the right
+
+(b2) What value(s) would be stored in the node that now contains 50? 
+     Justify your answer.
+
+36, 50, 57
+Since 50 is between 36 and 57 (in terms of value) it will be placed between them in the tree.

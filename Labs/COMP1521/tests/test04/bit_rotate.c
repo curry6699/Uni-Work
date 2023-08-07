@@ -1,0 +1,17 @@
+#include "bit_rotate.h"
+#define NUM 16
+
+// return the value bits rotated left n_rotations
+uint16_t bit_rotate(int n_rotations, uint16_t bits) {
+    if (n_rotations < 0) {
+	int rotations = ((n_rotations % 16) * -1);
+        uint16_t output = (bits >> rotations) | (bits << (NUM - rotations));
+        return output;
+    } 
+	else if (n_rotations > 0) {
+        int rotations = n_rotations % 16;
+        uint16_t output = (bits << rotations) | (bits >> (NUM - rotations));
+        return output;
+    }
+    return bits;
+}

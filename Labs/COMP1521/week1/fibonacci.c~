@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SERIES_MAX 46
+
+void recurse(int series, int i, int already_computed[47]);
+
+int main(void) {
+    int already_computed[47];
+    already_computed[0] = 0;
+    already_computed[1] = 1;
+
+    int series = 0;
+    int i = 1;
+    scanf("%d", &series); 
+    recurse(series, i, &already_computed[47]);
+    return EXIT_SUCCESS;
+}
+
+void recurse(int series, int i, int already_computed[47]) {
+    i++;   
+    already_computed[i] = already_computed[i - 1] + already_computed[i - 2];
+    if (i != series) {
+        recurse(series, i, &already_computed[47]);
+    }
+    else {
+        printf("%d \n", already_computed[i]);
+    }    
+
+}
